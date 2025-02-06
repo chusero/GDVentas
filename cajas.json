@@ -1,0 +1,179 @@
+[
+    {
+        "fecha_apertura": "2025-01-26 06:16:50",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-26 06:57:12"
+    },
+    {
+        "fecha_apertura": "2025-01-26 06:58:22",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-26 07:04:39"
+    },
+    {
+        "fecha_apertura": "2025-01-26 09:01:35",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-26 09:01:39"
+    },
+    {
+        "fecha_apertura": "2025-01-26 09:03:19",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 04:42:36"
+    },
+    {
+        "fecha_apertura": "2025-01-27 04:45:54",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 04:46:01"
+    },
+    {
+        "fecha_apertura": "2025-01-27 05:14:46",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 05:14:52"
+    },
+    {
+        "fecha_apertura": "2025-01-27 09:29:22",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 09:29:29"
+    },
+    {
+        "fecha_apertura": "2025-01-27 09:30:04",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 09:30:10"
+    },
+    {
+        "fecha_apertura": "2025-01-27 17:23:53",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-27 17:29:48"
+    },
+    {
+        "fecha_apertura": "2025-01-28 14:37:02",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-28 14:39:29"
+    },
+    {
+        "fecha_apertura": "2025-01-28 15:20:18",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-28 17:11:23"
+    },
+    {
+        "fecha_apertura": "2025-01-28 18:02:45",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-28 18:02:53"
+    },
+    {
+        "fecha_apertura": "2025-01-28 18:16:38",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-01-28 19:18:26"
+    },
+    {
+        "fecha_apertura": "2025-01-29 14:23:50",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "otros_gastos": [
+            {
+                "fecha": "2025-01-29",
+                "detalles": "luz",
+                "importe": 30000.0
+            },
+            {
+                "fecha": "2025-01-31",
+                "detalles": "luz",
+                "importe": 30000.0
+            }
+        ],
+        "otros_ingresos": [
+            {
+                "fecha": "2025-01-29",
+                "detalles": "deuda",
+                "importe": 50000.0
+            },
+            {
+                "fecha": "2025-01-31",
+                "detalles": "deuda",
+                "importe": 400000.0
+            }
+        ],
+        "retiros": [
+            {
+                "fecha": "2025-01-31",
+                "detalles": "pa vacaciones",
+                "importe": 750000.0
+            }
+        ],
+        "fecha_cierre": "2025-01-31 18:50:13"
+    },
+    {
+        "fecha_apertura": "2025-01-31 22:12:00",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-03 16:19:08"
+    },
+    {
+        "fecha_apertura": "2025-02-03 17:37:20",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-03 17:39:19"
+    },
+    {
+        "fecha_apertura": "2025-02-03 17:39:57",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-03 18:03:19"
+    },
+    {
+        "fecha_apertura": "2025-02-03 18:03:52",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-03 22:57:19"
+    },
+    {
+        "fecha_apertura": "2025-02-03 23:09:29",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-04 01:41:33"
+    },
+    {
+        "fecha_apertura": "2025-02-04 01:42:25",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": true,
+        "fecha_cierre": "2025-02-04 19:33:50"
+    },
+    {
+        "fecha_apertura": "2025-02-04 19:34:40",
+        "monto_inicial": 0.0,
+        "monto_final": 0.0,
+        "cerrada": false
+    }
+]

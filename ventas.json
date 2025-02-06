@@ -1,0 +1,918 @@
+[
+    {
+        "productos": [
+            {
+                "Nombre": "cargador samsung 25w c",
+                "precio": 10900.0,
+                "cantidad": 1,
+                "subtotal": 10900.0,
+                "IVA": 0.0
+            },
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "precio": 3900.0,
+                "cantidad": 1,
+                "subtotal": 3900.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 14800.0,
+        "fecha": "2025-01-29 16:53:00",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CABLE IPHONE C",
+                "precio": 6500.0,
+                "cantidad": 1,
+                "subtotal": 6500.0,
+                "IVA": 0.0
+            },
+            {
+                "Nombre": "AURICULAR MOBILE NEGRO",
+                "precio": 3500.0,
+                "cantidad": 1,
+                "subtotal": 3500.0,
+                "IVA": 0.0
+            },
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 12000.0,
+        "fecha": "2025-01-29 16:54:21",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CABLE USB FLIP V8 2MTS",
+                "precio": 3700.0,
+                "cantidad": 1,
+                "subtotal": 3700.0,
+                "IVA": 0.0
+            },
+            {
+                "Nombre": "CABLE ONLY USB FLIP V8",
+                "precio": 3500.0,
+                "cantidad": 6,
+                "subtotal": 21000.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 24700.0,
+        "fecha": "2025-01-29 16:55:06",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 0.0
+            },
+            {
+                "Nombre": "CABLE IPHONE C",
+                "precio": 6500.0,
+                "cantidad": 1,
+                "subtotal": 6500.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 17700.0,
+        "fecha": "2025-01-29 17:03:06",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR SAMSUNG 15W C /CABLE",
+                "precio": 10900.0,
+                "cantidad": 1,
+                "subtotal": 10900.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 10900.0,
+        "fecha": "2025-01-30 19:12:15",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CABLE MOBILE IPHONE",
+                "precio": 4500.0,
+                "cantidad": 1,
+                "subtotal": 4500.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 4500.0,
+        "fecha": "2025-01-30 19:16:04",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 0.0
+            }
+        ],
+        "total": 2000.0,
+        "fecha": "2025-01-30 19:22:51",
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 0.0
+            }
+        ],
+        "fecha": "2025-01-30 19:32:03",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 0.0
+            }
+        ],
+        "fecha": "2025-01-30 19:42:58",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 0.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "cargador samsung 25w c",
+                "precio": 10900.0,
+                "cantidad": 1,
+                "subtotal": 10900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 19:48:34",
+        "total": 10900.0,
+        "cliente": "Cliente X",
+        "IVA": 2289.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 19:50:58",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 2352.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 21:24:05",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 2352.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 21:26:03",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 2352.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 21:32:25",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 2352.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1570.25,
+                "cantidad": 1,
+                "subtotal": 1570.25,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 23:57:47",
+        "total": 1570.25,
+        "cliente": "Cliente X",
+        "IVA": 329.7525
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1570.25,
+                "cantidad": 1,
+                "subtotal": 1570.25,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-30 23:58:52",
+        "total": 1570.25,
+        "cliente": "Cliente X",
+        "IVA": 329.7525
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1570.25,
+                "cantidad": 1,
+                "subtotal": 1570.25,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:05:55",
+        "total": 1570.25,
+        "cliente": "Cliente X",
+        "IVA": 329.7525
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:06:43",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:10:37",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:17:01",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:29:13",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:32:19",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:33:45",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:35:23",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:39:00",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:43:21",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:45:09",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:52:26",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 00:55:24",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 3,
+                "subtotal": 5700.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 2,
+                "subtotal": 4000.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 01:07:59",
+        "total": 20900.0,
+        "cliente": "Cliente X",
+        "IVA": 4389.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 01:16:42",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 01:19:02",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 01:20:20",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 25,
+                "subtotal": 47500.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 01:23:33",
+        "total": 60700.0,
+        "cliente": "Cliente X",
+        "IVA": 12747.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "precio": 35000.0,
+                "cantidad": 2,
+                "subtotal": 70000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 14:36:45",
+        "total": 70000.0,
+        "cliente": "Cliente X",
+        "IVA": 14700.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "precio": 35000.0,
+                "cantidad": 1,
+                "subtotal": 35000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 14:44:22",
+        "total": 35000.0,
+        "cliente": "Cliente X",
+        "IVA": 7350.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "precio": 35000.0,
+                "cantidad": 2,
+                "subtotal": 70000.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 6,
+                "subtotal": 11400.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 14:49:48",
+        "total": 81400.0,
+        "cliente": "Cliente X",
+        "IVA": 17094.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "motorola",
+                "precio": 40000.0,
+                "cantidad": 1,
+                "subtotal": 40000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 14:57:16",
+        "total": 40000.0,
+        "cliente": "Cliente X",
+        "IVA": 8400.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "motorola",
+                "precio": 40000.0,
+                "cantidad": 1,
+                "subtotal": 40000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 15:29:53",
+        "total": 53200.0,
+        "cliente": "Cliente X",
+        "IVA": 11172.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 16:26:05",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "manaos cola 3lts",
+                "precio": 1900.0,
+                "cantidad": 1,
+                "subtotal": 1900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 16:28:52",
+        "total": 1900.0,
+        "cliente": "Cliente X",
+        "IVA": 399.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "precio": 3900.0,
+                "cantidad": 1,
+                "subtotal": 3900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 16:31:14",
+        "total": 3900.0,
+        "cliente": "Cliente X",
+        "IVA": 819.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 16:50:57",
+        "total": 2000.0,
+        "cliente": "Cliente X",
+        "IVA": 420.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "precio": 35000.0,
+                "cantidad": 1,
+                "subtotal": 35000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 16:57:56",
+        "total": 35000.0,
+        "cliente": "Cliente X",
+        "IVA": 7350.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "ejemplo 2",
+                "precio": 1.0,
+                "cantidad": 1,
+                "subtotal": 1.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 17:30:48",
+        "total": 1.0,
+        "cliente": "Cliente X",
+        "IVA": 0.21
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 17:57:11",
+        "total": 11200.0,
+        "cliente": "Cliente X",
+        "IVA": 2352.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "precio": 2000.0,
+                "cantidad": 1,
+                "subtotal": 2000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 18:26:21",
+        "total": 2000.0,
+        "cliente": "Cliente X",
+        "IVA": 420.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "precio": 35000.0,
+                "cantidad": 1,
+                "subtotal": 35000.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 18:27:55",
+        "total": 35000.0,
+        "cliente": "Cliente X",
+        "IVA": 7350.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "precio": 3900.0,
+                "cantidad": 1,
+                "subtotal": 3900.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-01-31 22:24:25",
+        "total": 3900.0,
+        "cliente": "Cliente X",
+        "IVA": 819.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "precio": 11200.0,
+                "cantidad": 1,
+                "subtotal": 11200.0,
+                "IVA": 21.0
+            },
+            {
+                "Nombre": "CABLE IPHONE C",
+                "precio": 6500.0,
+                "cantidad": 1,
+                "subtotal": 6500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 15:55:41",
+        "total": 17700.0,
+        "cliente": "Cliente X",
+        "IVA": 3717.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "edulcorante hilerer stevia 200 ml",
+                "precio": 1500.0,
+                "cantidad": 1,
+                "subtotal": 1500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 17:47:44",
+        "total": 1500.0,
+        "cliente": "Cliente X",
+        "IVA": 315.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "detergente magistral 500ml",
+                "precio": 2500.0,
+                "cantidad": 1,
+                "subtotal": 2500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 17:54:58",
+        "total": 2500.0,
+        "cliente": "Cliente X",
+        "IVA": 525.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "detergente magistral 500ml",
+                "precio": 2500.0,
+                "cantidad": 1,
+                "subtotal": 2500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 18:02:08",
+        "total": 2500.0,
+        "cliente": "Cliente X",
+        "IVA": 525.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "detergente magistral 500ml",
+                "precio": 2500.0,
+                "cantidad": 1,
+                "subtotal": 2500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 18:04:19",
+        "total": 2500.0,
+        "cliente": "Cliente X",
+        "IVA": 525.0
+    },
+    {
+        "productos": [
+            {
+                "Nombre": "detergente magistral 500ml",
+                "precio": 2500.0,
+                "cantidad": 1,
+                "subtotal": 2500.0,
+                "IVA": 21.0
+            }
+        ],
+        "fecha": "2025-02-03 18:18:29",
+        "total": 2500.0,
+        "cliente": "Cliente X",
+        "IVA": 525.0
+    }
+]

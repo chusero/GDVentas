@@ -1,0 +1,102 @@
+[
+    {
+        "Nombre": "manteca",
+        "Costo": "3242342",
+        "Precio de Venta": "45645646",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "cosmetico",
+        "C\u00f3digo de Barras": "1"
+    },
+    {
+        "Nombre": "medias",
+        "Costo": "4354354",
+        "Precio de Venta": "5345354",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "ropa",
+        "C\u00f3digo de Barras": "2"
+    },
+    {
+        "Nombre": "mesa",
+        "Costo": "456456465",
+        "Precio de Venta": "354345354646",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "mueble",
+        "C\u00f3digo de Barras": "3"
+    },
+    {
+        "Nombre": "cargador",
+        "Costo": "2500",
+        "Precio de Venta": "5000",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "accesorios",
+        "C\u00f3digo de Barras": "4"
+    },
+    {
+        "Nombre": "auriculares",
+        "Costo": "3000",
+        "Precio de Venta": "5000",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "audio",
+        "C\u00f3digo de Barras": "6"
+    },
+    {
+        "Nombre": "bangho x21",
+        "Costo": "30000",
+        "Precio de Venta": "50000",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "4",
+        "Categor\u00eda": "computadoras",
+        "C\u00f3digo de Barras": "5"
+    },
+    {
+        "Nombre": "samsung A51",
+        "Costo": "30000",
+        "Precio de Venta": "50000",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "15",
+        "Categor\u00eda": "celular",
+        "C\u00f3digo de Barras": "7"
+    },
+    {
+        "Nombre": "edulcorante hilerer stevia 200 ml",
+        "Costo": "1000",
+        "Precio de Venta": "1500",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "19",
+        "Categor\u00eda": "cosmeticos",
+        "C\u00f3digo de Barras": "7794940000796"
+    },
+    {
+        "Nombre": "detergente magistral 500ml",
+        "Costo": "1500",
+        "Precio de Venta": "2500",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "16",
+        "Categor\u00eda": "cosmeticos",
+        "C\u00f3digo de Barras": "7790990003039"
+    },
+    {
+        "Nombre": "te la virgina 150g x 50 saquitos",
+        "Costo": "1500",
+        "Precio de Venta": "2000",
+        "IVA": "21",
+        "Moneda": "ARS",
+        "Cantidad": "20",
+        "Categor\u00eda": "cosmeticos",
+        "C\u00f3digo de Barras": "7790150260661"
+    }
+]

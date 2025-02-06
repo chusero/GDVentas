@@ -1,0 +1,132 @@
+[
+    {
+        "Fecha": "25-01-29 16:58:41",
+        "Proveedor": "santiago",
+        "Productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "Cantidad": "5",
+                "Código de Barras": "190198889966"
+            },
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "Cantidad": "5",
+                "Código de Barras": "00110011"
+            },
+            {
+                "Nombre": "CABLE MOBILE IPHONE",
+                "Cantidad": "5",
+                "Código de Barras": "50061"
+            }
+        ],
+        "Estado": "Llegó"
+    },
+    {
+        "Fecha": "25-01-29 17:00:03",
+        "Proveedor": "santiago",
+        "Productos": [
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "Cantidad": "5",
+                "Código de Barras": "190198889966"
+            },
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "Cantidad": "5",
+                "Código de Barras": "00110011"
+            },
+            {
+                "Nombre": "CABLE MOBILE IPHONE",
+                "Cantidad": "5",
+                "Código de Barras": "50061"
+            }
+        ],
+        "Estado": "Llegó"
+    },
+    {
+        "Fecha": "25-01-31 22:17:25",
+        "Proveedor": "santiago",
+        "Productos": [
+            {
+                "Nombre": "ejemplo 2",
+                "Cantidad": "4",
+                "Código de Barras": "1"
+            },
+            {
+                "Nombre": "cargador samsung 25w c",
+                "Cantidad": "4",
+                "Código de Barras": "00"
+            },
+            {
+                "Nombre": "CARGADOR SAMSUNG 15W C /CABLE",
+                "Cantidad": "4",
+                "Código de Barras": "0000000"
+            },
+            {
+                "Nombre": "pendrive kingston 64gb",
+                "Cantidad": "4",
+                "Código de Barras": "326260"
+            },
+            {
+                "Nombre": "CABLE IPHONE C",
+                "Cantidad": "4",
+                "Código de Barras": "190198496263"
+            },
+            {
+                "Nombre": "CARGADOR IPHONE 20W",
+                "Cantidad": "4",
+                "Código de Barras": "190198889966"
+            },
+            {
+                "Nombre": "VIDRIO TEMPLADO ",
+                "Cantidad": "4",
+                "Código de Barras": "0101010101"
+            },
+            {
+                "Nombre": "AURICULAR MOBILE NEGRO",
+                "Cantidad": "4",
+                "Código de Barras": "52002"
+            },
+            {
+                "Nombre": "AURICULAR MOBILE ROJO",
+                "Cantidad": "4",
+                "Código de Barras": "52004"
+            },
+            {
+                "Nombre": "AURICULAR SAMSUNG BOLSITA",
+                "Cantidad": "4",
+                "Código de Barras": "00110011"
+            },
+            {
+                "Nombre": "CABLE ONLY USB FLIP V8",
+                "Cantidad": "4",
+                "Código de Barras": "110724001"
+            },
+            {
+                "Nombre": "CABLE USB FLIP V8 2MTS",
+                "Cantidad": "4",
+                "Código de Barras": "110724002"
+            },
+            {
+                "Nombre": "CABLE MOBILE IPHONE",
+                "Cantidad": "4",
+                "Código de Barras": "50061"
+            },
+            {
+                "Nombre": "manaos cola 3lts",
+                "Cantidad": "4",
+                "Código de Barras": "7798113301246"
+            },
+            {
+                "Nombre": "Perfume Kevin 250ml",
+                "Cantidad": "4",
+                "Código de Barras": "7791600037345"
+            },
+            {
+                "Nombre": "motorola",
+                "Cantidad": "4",
+                "Código de Barras": "ZT322FHLXL"
+            }
+        ]
+    }
+]

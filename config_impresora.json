@@ -1,0 +1,15 @@
+{
+    "empresa": "Locutorio",
+    "direccion": "adasdasd",
+    "telefono": "12312313123",
+    "cuit": "123123123123",
+    "mensaje": "GRACIAS POR SU COMPRA",
+    "impresora": "Microsoft Print to PDF",
+    "puerto": "USB",
+    "estilo": "Normal",
+    "modelo": "T\u00e9rmica Gen\u00e9rica",
+    "ancho_ticket": 7.5,
+    "condicion_iva": "Responsable Inscripto",
+    "ingresos_brutos": "00-00000000-0",
+    "inicio_actividades": "01/01/2020"
+}
