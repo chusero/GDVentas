@@ -41,20 +41,21 @@ class FirebaseManager:
             # Obtener el JSON de la variable de entorno
             firebase_creds = os.getenv("FIREBASE_CREDENTIALS")
             if not firebase_creds:
-                raise ValueError("FIREBASE_CREDENTIALS no está configurada")
+                raise ValueError("FIREBASE_CREDENTIALS no configurada")
     
             # Convertir el string JSON a un diccionario
             cred_dict = json.loads(firebase_creds)
     
-            # Crear credenciales desde el diccionario
+            # Inicializar Firebase
             cred = credentials.Certificate(cred_dict)
             firebase_admin.initialize_app(cred)
             self.db = firestore.client()
             logging.info("Conexión a Firebase establecida exitosamente")
-    
+
+        except json.JSONDecodeError as e:
+            logging.error(f"ERROR: JSON inválido en FIREBASE_CREDENTIALS. Detalle: {str(e)}")
         except Exception as e:
-            logging.error(f"Error inicializando Firebase: {str(e)}")
-            self.db = None
+            logging.error(f"ERROR inicializando Firebase: {str(e)}")
     
     def _setup_local_files(self):
         """Configura archivos locales necesarios"""
