@@ -103,12 +103,12 @@ class FirebaseManager:
         """Verifica conexión con Firebase"""
         return self.db is not None
     
-    def guardar_licencia_pendiente(self, correo: str, codigo: str, duracion: int):
-        """Guarda una licencia pendiente con manejo offline"""
+    def guardar_licencia_pendiente(self, correo: str, codigo: str, codigo_activacion: str, duracion: int):
         license_data = {
             "correo": correo,
             "duracion": duracion,
-            "codigo": codigo,
+            "codigo": codigo,  # UUID largo (para MercadoPago)
+            "codigo_activacion": codigo_activacion,  # Código corto (para el usuario)
             "fecha_generacion": datetime.now().isoformat(),
             "activa": False
         }
