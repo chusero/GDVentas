@@ -9,7 +9,8 @@ from tkinter import messagebox
 from dotenv import load_dotenv
 import logging
 import sys
-
+import absl.logging
+absl.logging.set_verbosity(absl.logging.ERROR)  # Ocultar logs de ABSL
 # Configuración de logging
 logging.basicConfig(
     level=logging.INFO,
