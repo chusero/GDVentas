@@ -143,46 +143,50 @@ class PaymentGateway:
             return "local-error"
     
     def process_webhook_event(self, event_data: Dict) -> bool:
-        """Procesa eventos del webhook de MercadoPago"""
         try:
+            # Obtener el ID del pago
             payment_id = event_data.get('data', {}).get('id')
             if not payment_id:
+                logging.error("No se encontró el ID del pago en el webhook")
                 return False
-                
+
+            # Obtener detalles del pago desde MercadoPago
             payment_info = self.sdk.payment().get(payment_id)
             if payment_info['status'] != 200:
+                logging.error(f"Error obteniendo detalles del pago: {payment_info['response']}")
                 return False
-                
+
+            # Actualizar el estado del pago en Firebase
             payment_data = payment_info['response']
             return self._update_payment_status(
                 payment_data['external_reference'],
                 payment_data['status']
             )
-            
+
         except Exception as e:
             logging.error(f"Error procesando webhook: {str(e)}")
             return False
     
+    # En mercado_pago.py
     def _update_payment_status(self, external_ref: str, status: str) -> bool:
-        """Actualiza el estado de un pago en el sistema"""
         try:
+            # Extraer el email y el ID del pago desde external_reference
             email, payment_id = external_ref.split('|')
-            
+
+            # Actualizar el estado del pago en Firebase
             update_data = {
                 'status': status,
                 'updated_at': datetime.now().isoformat()
             }
-            
+
             if self.firebase.is_connected():
                 self.firebase.db.collection("payment_attempts").document(payment_id).update(update_data)
+                logging.info(f"Estado del pago {payment_id} actualizado a {status}")
+                return True
             else:
-                self._store_local_payment(email, 0, update_data)
-            
-            if status == 'approved':
-                self._activate_license(email, payment_id)
-                
-            return True
-            
+                logging.error("No se pudo conectar a Firebase")
+                return False
+
         except Exception as e:
             logging.error(f"Error actualizando estado de pago: {str(e)}")
             return False
