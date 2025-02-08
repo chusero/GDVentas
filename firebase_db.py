@@ -147,7 +147,7 @@ class FirebaseManager:
                 "fecha_activacion": datetime.now().isoformat()
             }
             
-            # Transaction para asegurar consistencia
+            # Usar run_transaction para manejar la transacción
             @firestore.transactional
             def update_license(transaction):
                 transaction.set(
@@ -156,7 +156,8 @@ class FirebaseManager:
                 )
                 transaction.delete(licencia_ref)
             
-            transaction = firestore.transaction()
+            # Ejecutar la transacción
+            transaction = self.db.transaction()
             update_license(transaction)
             
             logging.info(f"Licencia {codigo} activada exitosamente")
