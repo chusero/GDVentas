@@ -204,11 +204,18 @@ class PaymentGateway:
             if self.firebase.is_connected():
                 doc = self.firebase.db.collection("payment_attempts").document(payment_id).get()
                 duration = doc.to_dict().get('duration_days', 30)
+                activation_code = doc.to_dict().get('metadata', {}).get('activation_code', '')  # Obtener el código corto
             else:
                 duration = 30  # Valor por defecto si no hay conexión
+                activation_code = ''  # Valor por defecto
                 
             # Lógica de activación
-            self.firebase.guardar_licencia_pendiente(user_email, payment_id, duration)
+            self.firebase.guardar_licencia_pendiente(
+                correo=user_email,  # Parámetro 1: correo
+                codigo=payment_id,  # Parámetro 2: codigo (UUID)
+                codigo_activacion=activation_code,  # Parámetro 3: código corto
+                duracion=duration  # Parámetro 4: duración
+            )
             self.firebase.activar_licencia(payment_id)
             
             logging.info(f"Licencia activada para {user_email}")
