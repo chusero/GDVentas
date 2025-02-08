@@ -38,7 +38,7 @@ class SubscriptionManager:
             if payment_link:
                 # Guardar AMBOS códigos en Firebase
                 self.firebase.guardar_licencia_pendiente(
-                    user_email=user_email,
+                    correo=user_email,
                     codigo=payment_id,          # UUID largo (para referencia interna)
                     codigo_activacion=activation_code,  # Código corto
                     duracion=duration_days
