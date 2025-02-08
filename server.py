@@ -5,7 +5,6 @@ from mercado_pago import PaymentGateway
 import logging
 import os
 from dotenv import load_dotenv
-
 # Configuración de logging
 logging.basicConfig(
     level=logging.INFO,
@@ -27,7 +26,7 @@ app = Flask(__name__)
 def handle_webhook():
     try:
         # Obtener datos del webhook
-        event_data = request.json
+        event_data = request.json  # ¡Faltaba esta línea!
         logging.info(f"Webhook recibido: {event_data}")
 
         # Procesar el evento de pago

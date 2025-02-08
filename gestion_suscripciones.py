@@ -24,27 +24,30 @@ class SubscriptionManager:
         self.sent_codes = {}  # Almacena códigos enviados por correo
 
     def create_subscription(self, user_email: str, duration_days: int) -> tuple:
-        """Crea una nueva suscripción y envía el código por correo"""
         try:
-            # Generar código único
-            activation_code = self._generate_activation_code()
-            self.sent_codes[user_email] = activation_code
-
-            # Crear link de pago
+            # Generar código corto (8 caracteres)
+            activation_code = self._generate_activation_code()  # Ej: "FU6NUTE4"
+            
+            # Generar payment_id (UUID para MercadoPago)
             payment_link, payment_id = self.payment_gateway.create_payment_link(
                 user_email,
                 duration_days,
-                {'activation_code': activation_code}
+                {'activation_code': activation_code}  # Enviar código corto como metadata
             )
 
             if payment_link:
-                # Guardar en Firebase
-                self.firebase.guardar_licencia_pendiente(user_email, payment_id, duration_days)
+                # Guardar AMBOS códigos en Firebase
+                self.firebase.guardar_licencia_pendiente(
+                    user_email=user_email,
+                    codigo=payment_id,          # UUID largo (para referencia interna)
+                    codigo_activacion=activation_code,  # Código corto
+                    duracion=duration_days
+                )
                 
-                # Enviar código por correo
+                # Enviar solo el código corto por correo
                 self.email_sender.send_email('codigo_licencia', {
                     'destinatario': user_email,
-                    'codigo': activation_code,
+                    'codigo': activation_code,  # Código corto
                     'duracion_dias': duration_days
                 })
                 
@@ -68,7 +71,7 @@ class SubscriptionManager:
             if self.firebase.is_connected():
                 docs = self.firebase.db.collection("licencias_pendientes") \
                     .where("correo", "==", user_email) \
-                    .where("codigo_licencia", "==", activation_code) \
+                    .where("codigo_activacion", "==", activation_code) \
                     .stream()
                     
                 licencia = next((doc.to_dict() for doc in docs), None)

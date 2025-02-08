@@ -51,7 +51,7 @@ class PaymentGateway:
         reraise=True
     )
     def create_payment_link(self, user_email: str, duration_days: int, metadata: Dict) -> Tuple[Optional[str], Optional[str]]:
-        """Crea un link de pago con reintentos y manejo offline"""
+    
         try:
             # Generar identificadores únicos
             payment_id = str(uuid.uuid4())
@@ -77,8 +77,13 @@ class PaymentGateway:
                     "failure": f"{os.getenv('FRONTEND_URL')}/payment/failure",
                     "pending": f"{os.getenv('FRONTEND_URL')}/payment/pending"
                 },
-                "metadata": metadata
+                "metadata": {
+                    "activation_code": metadata['activation_code'],  # Código corto
+                    "payment_id": payment_id  # UUID interno
+                }
             }
+        
+        # Resto del código igual...
             
             # Crear preferencia
             result = self.sdk.preference().create(preference)
@@ -144,23 +149,25 @@ class PaymentGateway:
     
     def process_webhook_event(self, event_data: Dict) -> bool:
         try:
-            # Obtener el ID del pago
             payment_id = event_data.get('data', {}).get('id')
             if not payment_id:
-                logging.error("No se encontró el ID del pago en el webhook")
+                logging.error("No se encontró ID de pago")
                 return False
 
-            # Obtener detalles del pago desde MercadoPago
+            # Obtener detalles del pago
             payment_info = self.sdk.payment().get(payment_id)
             if payment_info['status'] != 200:
-                logging.error(f"Error obteniendo detalles del pago: {payment_info['response']}")
                 return False
 
-            # Actualizar el estado del pago en Firebase
             payment_data = payment_info['response']
+            metadata = payment_data.get('metadata', {})
+            
+            # Actualizar Firebase con ambos códigos
             return self._update_payment_status(
-                payment_data['external_reference'],
-                payment_data['status']
+                external_ref=payment_data['external_reference'],
+                status=payment_data['status'],
+                activation_code=metadata.get('activation_code'),
+                payment_id=metadata.get('payment_id')
             )
 
         except Exception as e:
@@ -168,27 +175,26 @@ class PaymentGateway:
             return False
     
     # En mercado_pago.py
-    def _update_payment_status(self, external_ref: str, status: str) -> bool:
+    def _update_payment_status(self, external_ref: str, status: str, activation_code: str, payment_id: str) -> bool:
         try:
-            # Extraer el email y el ID del pago desde external_reference
-            email, payment_id = external_ref.split('|')
-
-            # Actualizar el estado del pago en Firebase
+            email, _ = external_ref.split('|')
+            
+            # Actualizar el documento en Firebase
             update_data = {
-                'status': status,
-                'updated_at': datetime.now().isoformat()
+                "status": status,
+                "activation_code": activation_code,
+                "updated_at": datetime.now().isoformat()
             }
-
-            if self.firebase.is_connected():
-                self.firebase.db.collection("payment_attempts").document(payment_id).update(update_data)
-                logging.info(f"Estado del pago {payment_id} actualizado a {status}")
-                return True
-            else:
-                logging.error("No se pudo conectar a Firebase")
-                return False
-
+            
+            self.firebase.db.collection("payment_attempts").document(payment_id).update(update_data)
+            
+            if status == "approved":
+                self._activate_license(email, payment_id)
+                
+            return True
+            
         except Exception as e:
-            logging.error(f"Error actualizando estado de pago: {str(e)}")
+            logging.error(f"Error actualizando estado: {str(e)}")
             return False
     
     def _activate_license(self, user_email: str, payment_id: str):
