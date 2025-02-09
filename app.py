@@ -1,4 +1,4 @@
-#app.py
+#aapp.py
 from interfaz import crear_interfaz
 from logo_de_carga import mostrar_logo_carga
 from autenticacion import Autenticacion
