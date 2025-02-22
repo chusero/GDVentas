@@ -168,32 +168,75 @@ class FirebaseManager:
             return False
     
     def activar_licencia(self, codigo: str) -> bool:
-        """Intenta activar una licencia con manejo offline"""
         try:
-            if self.is_connected():
-                result = self._process_activation(codigo)
-                if result:
-                    return True
+            if not self.is_connected():
+                return False
                 
-            # Si falla o está offline, guardar intento local
-            with open(self.LOCAL_LICENSES_FILE, 'r+') as f:
-                data = json.load(f)
-                data["activation_attempts"].append({
-                    "codigo": codigo,
-                    "timestamp": datetime.now().isoformat()
-                })
-                f.seek(0)
-                json.dump(data, f, indent=4)
+            licencia_ref = self.db.collection("licencias_pendientes").document(codigo)
+            licencia = licencia_ref.get().to_dict()
             
-            return False
+            if not licencia or licencia["activa"]:
+                return False
+            
+            dias_a_agregar = licencia["duracion"]
+            correo = licencia["correo"]
+    
+            # Buscar si el usuario ya tiene una suscripción activa
+            licencias_ref = self.db.collection("licencias_activas").where("correo", "==", correo).where("activa", "==", True)
+            docs = list(licencias_ref.stream())
+    
+            if docs:
+                # Si ya tiene una suscripción activa, sumar los días
+                licencia_actual = docs[0].to_dict()
+                fecha_expiracion_actual = datetime.fromisoformat(licencia_actual["fecha_expiracion"])
+    
+                if fecha_expiracion_actual > datetime.now():
+                    # Sumar los días a la fecha de expiración actual
+                    nueva_fecha_expiracion = fecha_expiracion_actual + timedelta(days=dias_a_agregar)
+                else:
+                    # Si la suscripción ya venció, empezar desde hoy
+                    nueva_fecha_expiracion = datetime.now() + timedelta(days=dias_a_agregar)
+    
+                licencia_actual["fecha_expiracion"] = nueva_fecha_expiracion.isoformat()
+    
+                @firestore.transactional
+                def update_license(transaction):
+                    transaction.update(docs[0].reference, {"fecha_expiracion": nueva_fecha_expiracion.isoformat()})
+                    transaction.delete(licencia_ref)
+    
+                transaction = self.db.transaction()
+                update_license(transaction)
+    
+            else:
+                # Si no tiene una suscripción activa, crear una nueva
+                fecha_expiracion = datetime.now() + timedelta(days=dias_a_agregar)
+                licencia_activa = {
+                    "correo": licencia["correo"],
+                    "fecha_expiracion": fecha_expiracion.isoformat(),
+                    "activa": True,
+                    "fecha_activacion": datetime.now().isoformat()
+                }
+    
+                @firestore.transactional
+                def update_license(transaction):
+                    transaction.set(
+                        self.db.collection("licencias_activas").document(codigo),
+                        licencia_activa
+                    )
+                    transaction.delete(licencia_ref)
+    
+                transaction = self.db.transaction()
+                update_license(transaction)
+    
+            logging.info(f"✅ Licencia {codigo} activada correctamente.")
+            return True
             
         except Exception as e:
-            logging.error(f"Error en activación: {str(e)}")
+            logging.error(f"❌ Error activando licencia: {str(e)}")
             return False
     
     def cleanup(self):
-        """Limpieza de recursos"""
-        if self.is_connected():
+        if firebase_admin._apps:
             firebase_admin.delete_app(firebase_admin.get_app())
             self.db = None
-            logging.info("Conexión Firebase cerrada")
+            logging.info("🔌 Conexión Firebase cerrada")
