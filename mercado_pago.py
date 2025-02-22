@@ -189,7 +189,7 @@ class PaymentGateway:
             self.firebase.db.collection("payment_attempts").document(payment_id).update(update_data)
             
             if status == "approved":
-                self._activate_license(email, payment_id)
+                logging.info(f"Pago aprobado para {email}, esperando activación del usuario.")
                 
             return True
             
