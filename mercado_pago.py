@@ -211,14 +211,12 @@ class PaymentGateway:
                 
             # Lógica de activación
             self.firebase.guardar_licencia_pendiente(
-                correo=user_email,  # Parámetro 1: correo
-                codigo=payment_id,  # Parámetro 2: codigo (UUID)
-                codigo_activacion=activation_code,  # Parámetro 3: código corto
-                duracion=duration  # Parámetro 4: duración
+                correo=user_email,
+                codigo=payment_id,
+                codigo_activacion=activation_code,
+                duracion=duration
             )
-            self.firebase.activar_licencia(payment_id)
-            
-            logging.info(f"Licencia activada para {user_email}")
+            logging.info(f"Licencia pendiente creada para {user_email}, esperando activación manual.")
             
         except Exception as e:
             logging.error(f"Error activando licencia: {str(e)}")
