@@ -60,34 +60,100 @@ class SubscriptionManager:
             return None, None
 
     def activate_subscription(self, user_email: str, activation_code: str) -> bool:
-        """Activa una suscripción validando el código"""
+        """Activa la licencia solo si el código es válido y el pago ha sido aprobado."""
         try:
-            # Verificar código
-            if self.sent_codes.get(user_email) != activation_code:
-                messagebox.showerror("Error", "Código de activación inválido")
-                return False
-                
-            # Buscar pago correspondiente
             if self.firebase.is_connected():
-                docs = self.firebase.db.collection("licencias_pendientes") \
+                # Verificar si el pago está aprobado en payment_attempts
+                docs_pagos = self.firebase.db.collection("payment_attempts") \
+                    .where("user_email", "==", user_email) \
+                    .where("status", "==", "approved") \
+                    .stream()
+                
+                pago_valido = next((doc.to_dict() for doc in docs_pagos if doc.to_dict().get("activation_code") == activation_code), None)
+                
+                if not pago_valido:
+                    logging.error("❌ Código de activación inválido o pago no aprobado")
+                    return False
+    
+                # Si el pago está aprobado, buscar la licencia pendiente
+                docs_licencias = self.firebase.db.collection("licencias_pendientes") \
                     .where("correo", "==", user_email) \
                     .where("codigo_activacion", "==", activation_code) \
                     .stream()
+    
+                licencia = next((doc.to_dict() for doc in docs_licencias), None)
+    
+                if licencia and not licencia.get("activa"):
+                    dias_a_agregar = licencia["duracion"]
+    
+                    # Verificar si el usuario ya tiene una licencia activa
+                    licencias_activas_ref = self.firebase.db.collection("licencias_activas") \
+                        .where("correo", "==", user_email) \
+                        .where("activa", "==", True)
                     
-                licencia = next((doc.to_dict() for doc in docs), None)
-                
-                if licencia and licencia.get("activa", False):
-                    # Activar licencia
-                    self.firebase.activar_licencia(licencia['codigo'])
-                    del self.sent_codes[user_email]  # Eliminar código usado
+                    docs_activas = list(licencias_activas_ref.stream())
+    
+                    if docs_activas:
+                        # Si ya tiene una suscripción activa, sumar los días
+                        licencia_actual = docs_activas[0].to_dict()
+                        fecha_expiracion_actual = datetime.fromisoformat(licencia_actual["fecha_expiracion"])
+    
+                        if fecha_expiracion_actual > datetime.now():
+                            # Sumar los días restantes
+                            nueva_fecha_expiracion = fecha_expiracion_actual + timedelta(days=dias_a_agregar)
+                        else:
+                            # Si la suscripción ya venció, empezar desde hoy
+                            nueva_fecha_expiracion = datetime.now() + timedelta(days=dias_a_agregar)
+    
+                        docs_activas[0].reference.update({
+                            "fecha_expiracion": nueva_fecha_expiracion.isoformat()
+                        })
+    
+                    else:
+                        # Si no tiene una suscripción activa, crear una nueva
+                        nueva_fecha_expiracion = datetime.now() + timedelta(days=dias_a_agregar)
+    
+                        self.firebase.db.collection("licencias_activas").document(licencia["codigo"]).set({
+                            "correo": licencia["correo"],
+                            "fecha_expiracion": nueva_fecha_expiracion.isoformat(),
+                            "activa": True,
+                            "fecha_activacion": datetime.now().isoformat()
+                        })
+    
+                    # Eliminar la licencia pendiente
+                    self.firebase.db.collection("licencias_pendientes").document(licencia["codigo"]).delete()
+    
+                    # Actualizar local_db.json
+                    with open("local_db.json", "r+") as f:
+                        local_db = json.load(f)
+                        
+                        # Si hay una fecha de expiración actual, sumar los días
+                        fecha_actual_str = local_db.get("fecha_expiracion")
+                        fecha_actual = datetime.fromisoformat(fecha_actual_str) if fecha_actual_str else datetime.now()
+    
+                        if fecha_actual > datetime.now():
+                            fecha_expiracion_final = fecha_actual + timedelta(days=dias_a_agregar)
+                        else:
+                            fecha_expiracion_final = nueva_fecha_expiracion
+    
+                        local_db.update({
+                            "subscription_active": True,
+                            "user_email": user_email,
+                            "fecha_expiracion": fecha_expiracion_final.isoformat()
+                        })
+                        
+                        f.seek(0)
+                        json.dump(local_db, f)
+                        f.truncate()
+    
+                    logging.info(f"✅ Licencia activada correctamente para {user_email}")
                     return True
-                    
+    
             return False
-
+    
         except Exception as e:
             logging.error(f"Error activando suscripción: {str(e)}")
             return False
-
     def _generate_activation_code(self) -> str:
         """Genera un código de activación único"""
         return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
